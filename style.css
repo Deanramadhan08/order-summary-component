@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@900&display=swap");
+
+:root {
+  /* color */
+  --color-primary: hsl(228, 45%, 44%);
+  --color-secondary: hsl(223, 47%, 23%);
+  --color-tertiary: hsl(224, 23%, 55%);
+  --color-accent: hsl(245, 75%, 52%);
+  --color-accent-hover: hsl(245, 55%, 52%);
+  --background-color: hsl(225, 100%, 94%);
+  /* image */
+  --background-pattern-mobile: url("../images/pattern-background-mobile.svg") top / contain no-repeat;
+  --background-pattern-desktop: url("../images/pattern-background-desktop.svg") repeat-x;
+  /* font */
+  --font-family: "Red Hat Display", sans-serif;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 900;
+  --font-size-small: 0.875rem;
+  --font-size-medium: 0.95rem;
+  --font-size-large: 1.35rem;
+  --line-height: 1.5;
+  --border-radius: 0.8em;
+  --box-shadow: 0 6px 20px -2px hsl(223, 47%, 23%);
+}
+
+/* Front-end Mentor attribution */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--color-primary);
+}
+
+/* User style */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1em;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--background-color) var(--background-pattern-mobile);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
+}
+
+main {
+  width: 90%;
+  max-width: 451px;
+  margin: 4.375em;
+  background-color: white;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.hero {
+  margin: 0;
+}
+
+.hero img {
+  width: 100%;
+  display: block;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1.6em 0;
+}
+
+.summary h1 {
+  margin-bottom: 1.1em;
+  color: var(--color-secondary);
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-extra-bold);
+  text-align: center;
+  line-height: var(--line-height);
+}
+
+.summary p {
+  width: 81.25%;
+  margin: 0;
+  margin-bottom: 1.6em;
+  color: var(--color-tertiary);
+  text-align: center;
+  line-height: var(--line-height);
+}
+
+.purchase {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  padding: 1em;
+  margin-bottom: 1.6em;
+}
+
+.purchase > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.purchase figure {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.plan-cost {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 1em;
+}
+
+.plan-cost h2 {
+  margin: 0;
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-bold);
+}
+
+.plan-cost p {
+  margin: 0;
+  padding: 0;
+  font-size: 0.875rem;
+}
+
+.change {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.change a {
+  color: hsl(245, 75%, 52%);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.change a:hover {
+  color: hsl(245, 55%, 52%);
+  text-decoration: none;
+}
+
+.buttons {
+  width: 85%;
+  margin-bottom: 0.85rem;
+  text-align: center;
+}
+
+.proceed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 1.6em;
+  background-color: hsl(245, 75%, 52%);
+  box-shadow: 0 6px 20px -2px hsl(223, 47%, 23%);
+  border-radius: 0.8em;
+  border: none;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.proceed:hover {
+  background-color: hsl(245, 55%, 52%);
+}
+
+.cancel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: none;
+  border-radius: 0.8em;
+  background-color: white;
+  color: hsl(224, 23%, 55%);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.cancel:hover {
+  color: hsl(223, 47%, 23%);
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 768px) {
+  body {
+    background-image: url("./images/pattern-background-desktop.svg");
+    background-repeat: repeat-x;
+    background-size: unset;
+  }
+}
